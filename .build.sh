@@ -1,2 +1,4 @@
 #!/bin/sh
-cp manifest.yml dist
+echo "Entered"
+cp "manifest.yml" "dist"
+echo "Exited"
