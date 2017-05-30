@@ -3,6 +3,7 @@ applications:
   memory: 256M
   instances: 1
   domain: mybluemix.net
+  buildpack: nodejs_buildpack
   name: iot-dwarika_angular
   host: iot-dwarika_angular
   disk_quota: 1024M
