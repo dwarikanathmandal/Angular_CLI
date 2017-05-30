@@ -11,10 +11,8 @@ before_script:
 
 script:
   - ng build --prod
-
-after_script:  
   - bash ./.build.sh
-
+  
 before_deploy:
   - cd dist
 deploy:
