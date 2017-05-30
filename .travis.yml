@@ -14,8 +14,8 @@ script:
   - build.sh
 
 after_script:  
-  - bash ./.build.sh
-   
+  - bash ./build.sh
+
 before_deploy:
   - cd dist
 deploy:
