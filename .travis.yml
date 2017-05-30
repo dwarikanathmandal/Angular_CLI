@@ -12,7 +12,8 @@ before_script:
 script:
   - ng build --prod
 
-before_deploy:
+before_deploy:  
+  - copy manifest.yml dist\manifest.yml
   - cd dist
 deploy:
   provider: bluemixcloudfoundry
