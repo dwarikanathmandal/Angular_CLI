@@ -1,0 +1,37 @@
+<div id="content" class="container clearfix">
+    <div id="scrollable" #scrollMe>
+        <div class="chat">
+            <div class="chat-history">
+                <ul class="chat-ul">
+
+                    <li *ngFor="let msg of messageList" [class.clearfix]="!msg.isInput">
+                        <div class="message-data" [class.align-right]="!msg.isInput">
+                            <span *ngIf="!msg.isInput" class="message-data-name me"><i class="fa fa-circle" ></i> Watson</span>
+                            <span *ngIf="msg.isInput" class="message-data-name you"><i class="fa fa-circle" ></i> You</span>
+                        </div>
+                         <div *ngIf="!msg.isInput" class="message me-message float-right">
+                              {{msg.text}}
+                         </div>
+                        <div *ngIf="msg.isInput" class="message you-message">
+                            {{msg.text}}
+
+                        </div>
+                    </li>                  
+                   
+                </ul>
+
+            </div>
+            <!-- end chat-history -->
+
+        </div>
+        <!-- end chat -->
+    </div>
+    <br/>
+    <div class="form-group">
+
+        <input type="text" style="width:90%; float:left;" class="form-control" [(ngModel)]="inputMessage" (keyup.enter)="sendMessage()"/>
+        <input type="button" (click)="sendMessage()" style=" float:left; width:10%; height:40px; min-width:80px;" class="btn-default" value="Send" />
+
+        <div>
+        </div>
+    </div>    

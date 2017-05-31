@@ -1,9 +1,5 @@
 applications:
-- path: .
-  memory: 256M
-  instances: 1
-  domain: mybluemix.net
+- name: bluemix-hello-angular2
+  random-route: true
+  memory: 64M
   buildpack: staticfile_buildpack
-  name: iot-dwarika_angular
-  host: iot-dwarika_angular
-  disk_quota: 1024M
