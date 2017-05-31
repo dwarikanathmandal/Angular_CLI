@@ -1,5 +1,6 @@
 applications:
-- name: bluemix-hello-angular2
-  random-route: true
+- name: iot-dwarika_angular
+  host: iot-dwarika_angular 
   memory: 64M
   buildpack: staticfile_buildpack
+  
