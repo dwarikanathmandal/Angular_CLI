@@ -1,6 +1,6 @@
 applications:
-- name: iot-dwarika_angular
-  host: iot-dwarika_angular 
+- name: Car Dashboard VA
+  random-route: true
   memory: 64M
   buildpack: staticfile_buildpack
   
