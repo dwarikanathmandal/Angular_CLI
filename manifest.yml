@@ -2,5 +2,6 @@ applications:
 - name: Car Dashboard VA
   random-route: true
   memory: 64M
+  host: car-dashboard-dwarika
   buildpack: staticfile_buildpack
   

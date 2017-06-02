@@ -3,15 +3,6 @@
         <div class="chat">
             <div class="chat-history">
                 <ul class="chat-ul">
-                    
-                    <li class="clearfix">
-                        <div class="message-data align-right" class.align-right>
-                            <span class="message-data-name me"><i class="fa fa-circle" ></i> Watson</span>                            
-                        </div>
-                         <div class="message me-message float-right">
-                              Hi. Welcome to virtual assistant of your car. What Can I do for you? Update
-                         </div>                        
-                    </li>    
 
                     <li *ngFor="let msg of messageList" [class.clearfix]="!msg.isInput">
                         <div class="message-data" [class.align-right]="!msg.isInput">
@@ -28,7 +19,7 @@
                     </li>                  
                    
                 </ul>
-
+                   
             </div>
             <!-- end chat-history -->
 
@@ -38,8 +29,8 @@
     <br/>
     <div class="form-group">
 
-        <input type="text" style="width:90%; float:left;" class="form-control" [(ngModel)]="inputMessage" (keyup.enter)="sendMessage()"/>
-        <input type="button" (click)="sendMessage()" style=" float:left; width:10%; height:40px; min-width:80px;" class="btn-default" value="Send" />
+        <input type="text" style="width:90%; float:left;" class="form-control" [(ngModel)]="inputMessage" (keyup.enter)="postDataConversation()"/>
+        <input type="button" (click)="postDataConversation()" style=" float:left; width:10%; height:40px; min-width:80px;" class="btn-default" value="Send" />
 
         <div>
         </div>
